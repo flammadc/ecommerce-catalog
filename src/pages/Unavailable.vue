@@ -9,10 +9,6 @@ export default {
       // Use router.push to navigate to the root path
       router.push('/');
 
-      // Assuming you have a counter variable, reset it here
-      // Replace this line with your actual counter logic
-      // counter.value = 1;
-      console.log("Counter reset");
     };
 
     return {
@@ -27,8 +23,8 @@ export default {
   <div class="background">
     <div class="color"></div>
     <div class="containerUnavailable">
-      <p>This product is unavailable to show</p>
-      <button @click="resetCounter()">Next Product</button>
+      <p class="textUnavailable">This product is unavailable to show</p>
+      <button class="buttonUnavailable" @click="resetCounter()">Next Product</button>
       <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" fill="currentColor" class="bi bi-emoji-frown"
         viewBox="0 0 16 16">
         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
@@ -72,8 +68,9 @@ export default {
   align-items: center;
   border-radius: 10px;
   background: #FFF;
+  border-radius: 10px;
+  background: #FFF;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
 }
 
 .bi-emoji-frown {
@@ -83,12 +80,12 @@ export default {
 
 }
 
-p {
+.textUnavailable {
   font-size: 20px;
   font-weight: 400;
 }
 
-button {
+.buttonUnavailable {
   margin: 0;
   padding: 9px 169px;
   border-radius: 4px;
