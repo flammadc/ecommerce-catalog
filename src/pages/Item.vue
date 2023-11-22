@@ -21,8 +21,6 @@ export default {
                 const response = await axios.get("https://fakestoreapi.com/products/" + counter.value);
                 items.value = response.data;
                 imageURL.value = response.data.image;
-                console.log(counter.value);
-                console.log(items.value.category);
                 if (items.value.category == "men's clothing" || items.value.category == "women's clothing") {
                     clothing.value = true;
 
@@ -42,7 +40,6 @@ export default {
                         router.push('/unavailable')
                     }
                     clothing.value = false;
-                    console.log("ok");
                 }
 
             } catch (error) {
